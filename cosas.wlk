@@ -1,40 +1,51 @@
 object knightRider {
-    var property peso = 500
-    var property peligrosidad = 10
-    var property modo = "Auto"
+    var peso = 500
+    var peligrosidad = 10
+
+    method peso() = peso
+    method peligrosidad() = peligrosidad
 }
 
 object bumblebee {
-    var property peso = 800
-    var property peligrosidad = 30
-    var property modo = "Auto"
+    var peso = 800
+    var peligrosidad = 30
+    var modo = "Auto"
 
+    method peso() = peso
+    method peligrosidad() = peligrosidad
     method cambiarModoARobot() {
         modo = "Robot"
-        peligrosidad = 15
+        peligrosidad = 30
     }
     method cambiarModoAAuto() {
         modo = "Auto"
-        peligrosidad = 30
+        peligrosidad = 15
     }
 }
 
 object ladrillos {
-    var property peso = 2 * cantidad
+    var peso = 2 * cantidad
     var property cantidad = 10
-    var property peligrosidad = 2
+    const peligrosidad = 2
+
+    method peso() = peso
+    method peligrosidad() = peligrosidad
 }
 
 object arena {
-    var property peso = 40
-    var property peligrosidad = 1
+    var peligrosidad = 1
+
+    method peso(unValor) = unValor
+    method peligrosidad() = peligrosidad
 }
 
 object bateria {
-    var property peso = 300
-    var property peligrosidad = 0
+    var peso = 300
+    var peligrosidad = 0
     var tieneMisiles = true
 
+    method peso() = peso
+    method peligrosidad() = peligrosidad
     method verificarSiHayMisiles() {
       if(tieneMisiles) {
         peso = 300
@@ -48,5 +59,9 @@ object bateria {
 }
 
 object contenedor {
-    var property peso = 100 + 
+    var peso = 100
+    var peligrosidad = 0
+
+    method peso() = peso
+    method peligrosidad() = peligrosidad
 }
