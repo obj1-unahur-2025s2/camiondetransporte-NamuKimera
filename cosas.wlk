@@ -64,7 +64,22 @@ object bateria {
 object contenedor {
     var peso = 100
     var peligrosidad = 0
+    const cosas = []
 
-    method peso() = peso
+    method peso() = peso + cosas.sum({c => c.peso()})
+    method peligrosidad() = peligrosidad
+    method verificarPeligrosidad() {
+      if (cosas.isEmpty()) {
+        peligrosidad = 0
+      } else {
+        cosas.max({c => c.peligrosidad()})
+      }
+    }
+}
+
+object residuos {
+    const peligrosidad = 200
+
+    method peso(unValor) = unValor
     method peligrosidad() = peligrosidad
 }
