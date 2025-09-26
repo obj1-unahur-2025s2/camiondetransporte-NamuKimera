@@ -46,6 +46,9 @@ object bateria {
 
     method peso() = peso
     method peligrosidad() = peligrosidad
+    method conmutarMisiles() {
+        tieneMisiles = false
+    }
     method verificarSiHayMisiles() {
       if(tieneMisiles) {
         peso = 300
